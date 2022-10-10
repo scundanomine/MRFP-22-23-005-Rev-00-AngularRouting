@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-department-list',
-  templateUrl: './department-list.component.html',
-  styleUrls: ['./department-list.component.css']
+  selector: 'app-department-details',
+  templateUrl: './department-details.component.html',
+  styleUrls: ['./department-details.component.css']
 })
-export class DepartmentListComponent implements OnInit {
+export class DepartmentDetailsComponent implements OnInit {
 
   departments = [
     {id:1, name:"Angular"},
@@ -14,6 +14,7 @@ export class DepartmentListComponent implements OnInit {
     {id:4, name:"Ruby"},
     {id:5, name:"Bootstrap"}
   ]
+  
   constructor() { }
 
   ngOnInit(): void {

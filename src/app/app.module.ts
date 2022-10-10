@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { DepartmentListComponent } from './department-list/department-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { DepartmentDetailsComponent } from './department-details/department-details.component';
 
 
 
@@ -15,7 +16,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AppComponent,
     EmployeeListComponent,
     DepartmentListComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    DepartmentDetailsComponent
   ],
   imports: [
     BrowserModule,
