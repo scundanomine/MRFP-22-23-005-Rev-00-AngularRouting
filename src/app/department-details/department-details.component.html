@@ -1,1 +1,8 @@
-<p>department-details works!</p>
+<h3>department-details works!</h3>
+<h2 *ngIf="flags; else elseBlock">
+    {{this.userId}} - {{this.detail}}
+</h2>
+
+<ng-template #elseBlock>
+    <h2>Data for {{userId}} not found</h2>
+</ng-template>
