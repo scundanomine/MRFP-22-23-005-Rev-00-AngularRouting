@@ -43,4 +43,40 @@ export class DepartmentDetailsComponent implements OnInit {
       this.flags = false;
   }
 
+  clickPrevious() {
+    let uid = parseInt(this.userId)-1;
+    this.router.navigate(['/departments', uid])
+
+    let flag = false
+    for (let i = 0; i < this.departments.length; i++) {
+      if (this.departments[i].id == uid) {
+        this.detail=this.departments[i].name;
+        flag = true;
+        this.flags=flag;
+        break;
+      }
+    }
+    if (flag == false)
+      this.flags = false;
+  }
+
+  clickNext(){
+    let uid = parseInt(this.userId)+1;
+    this.router.navigate(['/departments', uid])
+    let flag = false
+    for (let i = 0; i < this.departments.length; i++) {
+      if (this.departments[i].id == uid) {
+        this.detail=this.departments[i].name;
+        flag = true;
+        this.flags=flag;
+        break;
+      }
+    }
+    if (flag == false)
+      this.flags = false;
+  }
+
+  clickBack(){
+    this.router.navigate(['/departments', {id:this.userId}])
+  }
 }
